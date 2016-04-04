@@ -1,0 +1,398 @@
+/* Fonts
+ * --------------------------------------- */
+
+@font-face {
+  font-family: 'maison neue';
+  src: url('fonts/maisonneue-book-webfont.eot');
+  src: url('fonts/maisonneue-book-webfont.eot?#iefix') format('embedded-opentype'),
+   url('fonts/maisonneue-book-webfont.woff2') format('woff2'),
+   url('fonts/maisonneue-book-webfont.woff') format('woff'),
+   url('fonts/maisonneue-book-webfont.ttf') format('truetype'),
+   url('fonts/maisonneue-book-webfont.svg#maison_neuebook') format('svg');
+  font-weight: 300;
+  font-style: normal;
+
+}
+
+
+
+
+@font-face {
+  font-family: 'maison neue';
+  src: url('fonts/maisonneue-medium-webfont.eot');
+  src: url('fonts/maisonneue-medium-webfont.eot?#iefix') format('embedded-opentype'),
+   url('fonts/maisonneue-medium-webfont.woff2') format('woff2'),
+   url('fonts/maisonneue-medium-webfont.woff') format('woff'),
+   url('fonts/maisonneue-medium-webfont.ttf') format('truetype'),
+   url('fonts/maisonneue-medium-webfont.svg#maison_neuemedium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+
+/* Reset CSS
+ * --------------------------------------- */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h3,h2,h4,h5,h6,pre,
+form,fieldset,input,textarea,p,blockquote,th,td {
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration:none;
+}
+table {
+  border-spacing: 0;
+  width: 100%;
+}
+fieldset,img {
+  border: 0;
+}
+address,caption,cite,code,dfn,em,strong,th,var {
+  font-weight: 300;
+  font-style: normal;
+}
+strong{
+  font-weight: 500;
+}
+ol,ul {
+  list-style: none;
+  margin:0;
+  padding:0;
+}
+caption,th {
+  text-align: left;
+
+}
+h1,h3,h2,h4,h5,h6 {
+  font-weight: 300;
+  font-size: 100%;
+  margin:0;
+  padding:0;
+  color:#444;
+}
+q:before,q:after {
+  content:'';
+}
+abbr,acronym { border: 0;
+}
+
+/* Disable jQuery UI focus glow */
+
+*:focus {
+  outline: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* Custom CSS
+ * --------------------------------------- */
+
+body {
+  font-family: 'Maison neue';
+  font-weight: 300;
+  letter-spacing: .01em;
+  font-size: 14px;
+  line-height: 22px;
+  background: whitesmoke;
+}
+
+a {
+  border-bottom: 2px solid #D6A56A;
+  color: black;
+}
+
+p {
+  max-width: 610px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 10px 30px 0 30px;
+}
+
+h1, .essay-title, .essay-subtitle {
+  font-size: 26px;
+  padding-top: 30px;
+  font-weight: 300;
+}
+
+h2 {
+  font-weight: 300;
+  font-size: 16px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+h3, .author, .inside-title {
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  padding: 10px 0 0 0;
+}
+
+p:first-of-type {
+  padding-top: 30px;
+}
+
+.bottom {
+  background: whitesmoke;
+  padding-bottom: 60px; 
+  padding-top: 20px;
+}
+
+.content {
+  padding-top: 20px;
+  overflow: visible;
+  text-align: center;
+}
+
+/* Custom Lists
+ * --------------------------------------- */
+
+.customlist {
+  background: white;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 1px solid #e4e4e4;
+  border-top: 1px solid #E4E4F4;
+  text-align: left;
+  margin-top: 30px;
+}
+  
+.customlist h2{
+  padding: 15px;
+  border-top: 1px solid #E4E4F4;
+}
+
+.customlist h2:first-child{
+  border-top: 0;
+}
+
+.customlist div {
+  padding-top: 15px;
+  padding-bottom: 30px;
+}
+  
+/* Fancy Tables
+ * --------------------------------------- */
+
+td:nth-child(2) {
+  width: 17%;
+  text-align: center;
+}
+
+td {
+  padding-top: 6px;
+  padding-bottom: 5px;
+}
+
+tr:hover {
+  background-color: #F9F9F9;
+}
+
+td a {
+  border: 0;
+}
+
+.nonlinkcell {
+  padding-right: 15px;
+}
+
+.nonlinkcell:hover, .nonlinkcell-accordion:hover {
+  background-color: white;
+  cursor: auto;
+}
+
+td a{
+  display: block;
+}
+
+#accordion h2{
+  cursor: pointer;
+}
+
+#accordion h2:before{
+  content: '+';
+  padding-right: 15px;
+  font-weight: 700;
+}
+
+tr h3, .stockist {
+  padding-left: 20px;
+ }
+
+.article {
+  padding-left: 38px;
+}
+
+.nonlinkcell-accordion {
+  padding-left: 18px;
+}
+
+.downloadlinks, .downloadlinks a {
+  font-size: 12px;
+  color: #D6A56A;
+}
+
+.volumes, .volumes a {
+  font-size: 12px;
+}
+
+
+/* Homepage hero
+ * --------------------------------------- */
+
+#top {
+  background-color: #fafbfb;
+  height: 100vh;
+  background-size: cover;
+  display: table;
+  width: 100%;
+  background-position:50%;
+  table-layout: fixed;  
+}
+
+
+#topinner {
+  display: table-cell;
+  vertical-align: middle;
+  overflow: hidden;
+  background-image: url(lies.gif);
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+.down {
+  bottom: 50px;
+  position: absolute;
+  -webkit-animation: wiggle 1s ease 0s infinite;
+  -moz-animation: wiggle 1s ease 0s infinite;
+  -ms-animation: wiggle 1s ease 0s infinite;
+  -o-animation: wiggle 1s ease 0s infinite;
+  animation: wiggle 1s ease 0s infinite;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+  @media screen and (max-width: 450px) {
+    .down {
+      bottom: 20px;
+    }
+  }
+
+
+/* Essay styling
+ * --------------------------------------- */
+
+.header-logo {
+  border-bottom: none;
+}
+
+.header-logo-image {
+  width:200px;
+  height: auto;
+}
+
+.essay {
+  text-align: left;
+}
+
+.essay-title {
+    padding-top: 10px;
+}
+
+.essay-subtitle {
+  font-size: 17px;
+  padding-top: 7px;
+}
+
+.inside-title {
+  padding: 10px 30px 0 30px;
+}
+
+.essay p {
+  padding-bottom: 10px;
+}
+
+.epigraph {
+  font-size: 12px;
+  text-align: center;
+  line-height: 18px;
+  font-style: italic;
+}
+
+.epigraph-attribution {
+  font-size: 12px;
+  text-align: center;
+  line-height: 18px;
+  margin-top: -20px;
+}
+
+.epigraph-attribution:before {
+  content: "– ";
+}
+
+.break {
+  text-align: center;
+}
+
+.break:before {
+  content: "\2014";
+  text-align: center;
+}
+
+.italic {
+  font-style:italic;
+}
+
+.notitalic {
+  font-style:normal;
+}
+
+.bold {
+  font-weight:bold;
+}
+
+.superscript {
+  font-size:58%;
+  vertical-align:super;
+}
+
+
+.link-to-footnote {
+  vertical-align:super;
+  border-bottom: none;
+  color: #D6A56A;
+  font-size: 68%;
+  line-height: 17px;
+}
+
+.essay-title .link-to-footnote {
+  font-size: 14px;
+  vertical-align: super;
+}
+
+.footnotes {
+  border-top: 1px solid #D6A56A;
+  font-size: 12px;
+  line-height: 18px;
+  max-width: 610px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+}
+
+.footnote-number {
+  border-bottom: none;
+  color: #D6A56A;
+}
+
+.footnote {
+  margin-left: 15px;
+  text-indent: -15px;
+}
+
