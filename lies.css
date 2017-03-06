@@ -133,17 +133,13 @@ h3, .author, .inside-title {
 p:first-of-type {
   padding-top: 30px;
 }
-
-.bottom {
-  background: whitesmoke;
-  padding-bottom: 60px; 
-  padding-top: 20px;
-}
-
 .content {
   padding-top: 20px;
   overflow: visible;
   text-align: center;
+  background: whitesmoke;
+  padding-bottom: 60px; 
+  padding-top: 20px;
 }
 
 /* Custom Lists
