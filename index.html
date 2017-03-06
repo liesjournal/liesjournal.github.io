@@ -1,435 +1,514 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-  
   <div id="body">
-	
-	
-	<div class="bottom">
+  <div class="bottom">
   </div>
-
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>LIES</title>
-	<meta name="description" content="LIES is a journal spearheaded by a queer feminist collective based in multiple cities: Oakland, Baltimore, Philadelphia, New York, London." />
-	<meta name="keywords"  content="feminist, journal, communization" />
-	<meta name="Resource-type" content="Document" />
-	<meta name="viewport" content="initial-scale = 1.0, user-scalable = no">
-	<meta name="apple-mobile-web-app-capable" content="yes" />
-	<meta name="google-site-verification" content="VxMyWmXqo4K3H0f2VlsAFsnZkKr3pvR48J_4wVtmeE4" />
-
-	<link rel="stylesheet" type="text/css" href="lies.css" />
-
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-
-	<script type="text/javascript">
-
-		$(function() {
-	    	$( "#accordion" ).accordion({
-          		active: false,
-            	collapsible: true,
-            	heightStyle: "content",
-
-        	});
-	 	});
-
-
-		var text='L I E S';
-		var delay=80; // speed of trail
-		var Xoff=20; // pixel count from the left of the cursor (- values go to left)
-		var Yoff=0; // pixel count from the top of the cursor (- values go up)
-		var txtw=10;  // amount of pixel space each character occupies
-		var beghtml='<font-family: "Helvetica">';  // optional html code that effects whole text string such as font color, size, etc. 
-		var endhtml='</font>';  
-		ns4 = (navigator.appName.indexOf("Netscape")>=0 && document.layers)? true : false;
-		ie4 = (document.all && !document.getElementById)? true : false;
-		ie5 = (document.all && document.getElementById)? true : false;
-		ns6 = (document.getElementById && navigator.appName.indexOf("Netscape")>=0 )? true: false;
-		var txtA=new Array();
-		text=text.split('');
-		var x1=0;
-		var y1=-1000;
-		var t='';
-		for(i=1;i<=text.length;i++){
-		t+=(ns4)? '<layer left="0" top="-100" width="'+txtw+'" name="txt'+i+'" height="1">' : '<div id="txt'+i+'" style="position:absolute; top:-100px; left:0px; height:1px; width:'+txtw+'; visibility:visible; font-family: "Maison neue", Maison Neue, Maison, Ariel; font-size: 14px; font-weight:300 ; height: 22px;">';
-		t+=beghtml+text[i-1]+endhtml;
-		t+=(ns4)? '</layer>' : '</div>';
-		}
-		document.write(t);
-		function moveid(id,x,y){
-		if(ns4)id.moveTo(x,y);
-		else{
-		id.style.left=x+'px';
-		id.style.top=y+'px';
-		}}
-		function animate(evt){
-		x1=Xoff+((ie4||ie5)?event.clientX+document.body.scrollLeft:evt.pageX);
-		y1=Yoff+((ie4||ie5)?event.clientY+document.body.scrollTop:evt.pageY);
-		}
-		function getidleft(id){
-		if(ns4)return id.left;
-		else return parseInt(id.style.left);
-		}
-		function getidtop(id){
-		if(ns4)return id.top;
-		else return parseInt(id.style.top);
-		}
-		function getwindowwidth(){
-		if(ie4||ie5)return document.body.clientWidth+document.body.scrollLeft;
-		else return window.innerWidth+pageXOffset;
-		}
-		function movetxts(){
-		for(i=text.length;i>1;i=i-1){
-		if(getidleft(txtA[i-1])+txtw*2>=getwindowwidth()){
-		moveid(txtA[i-1],0,-1000);
-		moveid(txtA[i],0,-1000);
-		}else moveid(txtA[i], getidleft(txtA[i-1])+txtw, getidtop(txtA[i-1]));
-		}
-		moveid(txtA[1],x1,y1);
-		}
-		window.onload=function(){
-		for(i=1;i<=text.length;i++)txtA[i]=(ns4)?document.layers['txt'+i]:(ie4)?document.all['txt'+i]:document.getElementById('txt'+i);
-		if(ns4)document.captureEvents(Event.MOUSEMOVE);
-		document.onmousemove=animate;
-		setInterval('movetxts()',delay);
-		}
-
-	</script>
-
-</head>
-
-<body>
-
-
-    
-    		<div class="content">    
-          <a name="below-top"></a>
-       			<h1>LIES Journal is now accepting submissions for LIES Volume III (2017)</h1>
-          	<p>LIES is a platform for materialist, communist, autonomous, and otherwise antagonistic writing by non cis men. We seek to embody and develop in print autonomous feminist practices that understand opposition to capitalism, cisheteropatriarchy, white supremacy, xenophobia, and the legacies of colonialism and slavery as central to feminist struggle. We especially encourage submissions by writers of color; writers of trans, non-binary, two-spirit, and all other non-cisgender experience; and writers with indigenous, diasporic, migrant, and cross-cultural backgrounds. We hope to solicit writings that foreground decolonial perspectives and challenge Euro-American-centric historical and analytical frameworks.
-            <p>We publish a variety of written formats, including: essay-length analytical pieces, poetry, creative writing, workers’ inquiries, and explorations of archival materials, and more. We are also interested in publishing pieces that have not appeared in English yet; if you can help translate or if you know of a piece that needs translating, please get in touch!</p>
-		<p></p>
-              <p></p>
-	<h2>Topics of interest include, but are not limited to: </h2>
-				<div align="left">
-            <p>&#9733; Materialist-feminist contemporary and historical analyses of the neo-fascist, white and/or ethno-nationalist, xenophobic right</p>
-	          <p>&#9733; Major political upheavals such as Brexit in the U.K. and the Trump presidency in the U.S.
-            <p>&#9733; Global perspectives on anti-blackness</p>
-            <p>&#9733; Healthcare, care work, and alternative care networks</p>
-            <p>&#9733; Disability and ableism </p>
-            <p>&#9733; Transgender militancy, gender struggle and/or abolition, institutional and vigilante violence against trans people</p>
-          <p>&#9733; Inquiries into the nature of gender, race, and/or class</p>
-            <p>&#9733; Militancy and feminism</p>
-          <p>&#9733; Workers’ inquiries with an eye to race, gender, and migration</p>
-             <p>&#9733; State violence, dispossession, displacement, and regimes of migration control</p>
-            <p>&#9733; Border-crossing and cross-cultural dwelling</p>
-            <p>&#9733; Indigenous resistance movements, decolonial thought and methodologies</p>
-            <p>&#9733; Resource extraction and climate change crises</p>
-            <p>&#9733; Value form theory, communization, and other political-economic critique</p>
-            <p>&#9733; Ontology and historical materialism</p>
-            <p>&#9733; Historical and contemporary conversations and material exchanges between the South and the East; South-to-South dialogues</p>
-            <p>&#9733; Report backs from ongoing struggles and resistance movements</p>
-            </div>
-			<p></p>
-              <p>Initial pitches, abstracts, or first drafts are due by <b>Tuesday 14th February 2017</b>. Send submissions and any questions to liesjournal [at] gmail [dot] com. Due to financial limitations of the project, we regret that at present all authors are unpaid; however contributors will be given close editorial support in developing their work.
-</p>
-            </div>
-          
-    
-		
-    
-		<div class="content">	
-      <a name="below-top"></a>
-			<h1>Read</h1>
-			<p>You may download a full PDF of <a href="http://dl.dropboxusercontent.com/u/20075901/LIES%20Final%20Download%20Single%20Page.pdf">Volume I</a> or of <a href="volume2.pdf">Volume II</a>, or read individual articles below. </p>
-			<div id="accordion" class="customlist">
-	  			<h2>LIES Volume I</h2>
-	  			<div>
-					<table>
-						<tr>
-							<td class="article"><a href="volume1-01-editorialnote.html">Editorial Note - LIES Collective</a></td>
-							<td><a href="volume1-01-editorialnote.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-					    <tr>
-					    	<td class="nonlinkcell-accordion"><h3>Not-Sex And Social Relations</h3></td>
-					    </tr>
-						<tr>
-							<td class="article"><a href="volume1-02-undoingsex.html">Undoing Sex: Against Sexual Optimism - C.E.</a></td>
-							<td><a href="volume1-02-undoingsex.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="article"><a href="volume1-03-againstcoupleform.html">Against the Couple Form - Clémence X. Clementine</a></td>
-							<td><a href="volume1-03-againstcoupleform.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="article">	
-								<a href="volume1-04-letterstol.html">Letters to L: Visions and Paranoia - M. Sandovsky</a></td>
-							<td><a href="volume1-04-letterstol.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-05-saltwedge.html">Salt Wedge (Excerpts) - Sogumi</a></td>
-							<td><a href="volume1-05-saltwedge.pdf"><span class="downloadlinks">PDF</span></a>
-							</td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-06-caring.html">Caring: A Labor of Stolen Time: Pages from a CNA’s Notebook - Jomo</a></td>
-							<td><a href="volume1-06-caring.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="nonlinkcell-accordion"><h3>Notes On Struggle</h3></td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-07-santarita.html">Santa Rita 128 To 131 - Wendy Trevino</a></td>
-							<td><a href="volume1-07-santarita.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-08-occupations.html">On the Recent Occupations: A Communique From W.&amp;.T.C.H. - W.&amp;.T.C.H.</td>
-							<td><a href="volume1-08-occupations.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-09-womeninuprising.html">Women in Uprising: The Oaxaca Commune, the State, and Reproductive Labor - Barucha Calamity Peller</a></td>
-							<td><a href="volume1-09-womeninuprising.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-10-againstinnocence.html">Against Innocence: Race, Gender, and the Politics of Safety - Jackie Wang</a></td>
-							<td><a href="volume1-10-againstinnocence.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="article nonlinkcell">
-								Recent Communiques</td>
-						</tr>
-						<tr>
-							<td class="nonlinkcell-accordion"><h3>Identity, Abolition, Communization</h3></td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-11-donttry.html">Don’t Try to Dig Yourself out of the Hole. You Won’t Get Out. - Magda Llwhisk</a></td>
-							<td><a href="volume1-11-donttry.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-12-genderdistinction.html">The Gender Distinction in Communization Theory - P. Valentine</a></td>
-							<td><span class="downloadlinks"><a href="volume1-12-genderdistinction-english.pdf">English</a>   <a href="volume1-12-genderdistinction-spanish.pdf">Spanish</a></span></td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-13-tobeliberated.html">“To Be Liberated from Them (or Through Them)”: A Call for a New Approach - Sky Palace</a></td>
-							<td><a href="volume1-13-tobeliberated.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="nonlinkcell-accordion"><h3>Archives</h3></td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-14-prostitution.html">“All The Work We Do As Women”: Feminist Manifestoson Prostitution and the State, 1977</a></td>
-							<td><a href="volume1-14-prostitution.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="article">
-								<a href="volume1-15-comingout.html">“We Referred to It as Coming Out”: Recollections on Trans Identity, State Violence, and 1960s Radicalism - Suzan Cooke</a></td>
-							<td><a href="volume1-15-comingout.pdf"><span class="downloadlinks">PDF</span></a></td>
-						</tr>
-						<tr>
-							<td class="nonlinkcell-accordion"><h3>Reviews</h3></td>
-						</tr>
-						<tr>
-							<td class="article"><a href="volume1-16-bookreview.html">Normal Life: Administrative Violence, Critical Trans Politics, and the Limits of the Law, Dean Spade</a></td>
-							<td><a href="volume1-16-bookreview.pdf"><span class="downloadlinks">PDF</span></a>
-						</td>
-					</table>
-				</div>
-				<h2>LIES Volume II</h2>
-				<div>
-					<table>
-							<tr>
-								<td class="article nonlinkcell">Editorial - LIES Collective</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Untitled - Michelle</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Against Gender, Against Society - nila nokizaru</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">I am Here as a Victim - Michelle R.</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">A Disgrace Reserved for Prostitutes: Complicity &amp; the Beloved Community - Pluma Sumaq</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Grateful - Monica Stevens</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Inversion &amp; Invisibility: - Black Women, Black Masculinity, &amp; Anti-Blackness - LaKeyma King</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">How to Die - Feng Chen</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Shout to Cissy Girls - Sepand Mashiahof</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">To Make Many Lines, to Form Many Bonds: Thoughts on Autonomous Organizing - FLOC</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Fantasy Numeral 4 - Feng Chen</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">First Women, Then the Nation: Confronting Colonial Gender Violence - L. Cornum</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Monica, My Son - Monica Stevens</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Notes on the Erotic in the Capitalist Mode of Production - Jack Frost &amp; Eli Long</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">What Resembles the Grave But Isn’t - Anne Boyer</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Infrastructures of Injury - Amanda Armstrong</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Get Free - Julia Katz</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">The Fire This Time? - Jasmine Gibson</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">The Gospel According to Michelle - Michelle</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">love poems - Paula Cobo–Guevara</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Hanging Out - coda wei</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Betrayal - Words to Fire Collective</td>
-							</tr>
-							<tr>
-								<td class="article nonlinkcell">Poem #2 - Eden Jeffries</td>
-							</tr>
-					</table>
-				</div>
-			</div>
-		</div>
-
-
-
-
-
-			
-
-
-
-			<div class="content">	
-			<h1>Shop</h1>
-			<p>All proceeds from the journal go into making the next issue of the journal, as well as sometimes being sold as a benefit to people working on important struggles.</p>
-			<div class="customlist">
-	  			<h2>Stockists</h2>
-	  			<div>
-					<table class="stockists">
-						<tr>
-							<td class="nonlinkcell"><h3>Online</h3></td>
-					    	</tr>
-						<tr>
-							<td class="stockist"><a href="http://www.akpress.org/liesjournal.html">AK Press, USA</a></td>
-							<td><a href="http://www.akpress.org/liesjournal.html"><span class="volumes">Vol. I &amp; II</span></a></td>
-						</tr>
-						<tr>
-							<td class="stockist"><a href="http://www.akuk.com/index.php?_a=product&product_id=7524">AK Press, UK</a></td>
-							<td><a href="http://www.akuk.com/index.php?_a=product&product_id=7524"><span class="volumes">Vol. I &amp; II</span></a></td>
-						</tr>
-						    <tr>
-						    	<td class="nonlinkcell"><h3>California</h3></td>
-						    </tr>
-						<tr>
-							<td class="stockist"><a href="http://moesbooks.com/">Moe’s Books, Berkeley</a></td>
-							<td><a href="http://moesbooks.com/"><span class="volumes">Vol. II</span></a></td>
-						</tr>
-						<tr>
-							<td class="stockist"><a href="http://thelonghaul.org/">The Long Haul, Berkeley</a></td>
-							<td><a href="http://thelonghaul.org/"><span class="volumes">Vol. II</span></a></td>
-						</tr>
-						<tr>
-							<td class="stockist"><a href="http://qilombo.org/">Qilombo, Oakland</a></td>
-							<td><a href="http://qilombo.org/"><span class="volumes">Vol. II</span></a></td>
-						</tr>
-						<tr>
-							<td class="stockist"><a href="http://moderntimesbookstore.com/">Modern Times Bookstore, San Francisco</a></td>
-							<td><a href="http://moderntimesbookstore.com/"><span class="volumes">Vol. II</span></a></td>
-						</tr>
-						<tr>
-							<td class="stockist"><a href="http://www.alleycatbookshop.com/">Alley Cat Books, San Francisco</a></td>
-							<td><a href="http://www.alleycatbookshop.com/"><span class="volumes">Vol. II</span></a></td>
-						</tr>
-						<tr>
-							<td class="stockist"><a href="http://thelonghaul.org">The Long Haul, Berkeley</a></td>
-							<td><a href="http://thelonghaul.org"><span class="volumes">Vol. II</span></a></td>
-						</tr>
-						<tr>
-							<td class="stockist"><a href="http://www.greenapplebooks.com">Green Apple Books, San Francisco</a></td>
-							<td><a href="http://www.greenapplebooks.com"><span class="volumes">Vol. II</span></a></td>
-						</tr>
-					
-						<tr>
-					     		<td class="nonlinkcell"><h3>New York</h3></td>
-					        </tr>	
-						<tr>
-							<td class="stockist"><a href="http://bluestockings.com/">Bluestockings Books, New York</a></td>
-							<td><a href="http://bluestockings.com/"><span class="volumes">Vol. II</span></a></td>
-						</tr>
-						<tr>
-							<td class="nonlinkcell"><h3>Indiana</h3></td>
-					    	</tr>	
-						<tr>
-							<td class="stockist"><a href="http://www.boxcarbooks.org/">Boxcar Books, Bloomington</a></td>
-							<td><a href="http://www.boxcarbooks.org/"><span class="volumes">Vol. I & II</span></a></td>
-						</tr>
-						<tr>
-							<td class="nonlinkcell"><h3>Canada</h3></td>
-					    	</tr>
-						<tr>
-							<td class="stockist"><a href="https://insoumise.wordpress.com">Librairie L'Insoumise, Montréal</a></td>
-							<td><a href="https://insoumise.wordpress.com"><span class="volumes">Vol. II</span></a></td>
-						</tr>
-						
-						
-						
-					</table>
-				</div>
-			
-		</div>
-		<div class="content">
-			<h1>Contact</h1>
-			<p>Email us to order limited edition, double-sided LIES posters for sale for $10 each. More merch (t-shirts, totes, patches, and more) will be available soon.</p>
-			<p>For wholesale orders (20+), please
-				<script type="text/javascript">
-				    document.write("<a href=\"mail" + "to:" + new Array("liesjournal@","ail.com").join("gm") + "\">" + new Array("contact us") + "</" + "a>");
-				</script>
-				.
-			</p>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>LIES</title>
+    <meta name="description" content="LIES is a journal spearheaded by a queer feminist collective based in multiple cities: Oakland, Baltimore, Philadelphia, New York, London." />
+    <meta name="keywords"  content="feminist, journal, communization" />
+    <meta name="Resource-type" content="Document" />
+    <meta name="viewport" content="initial-scale = 1.0, user-scalable = no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="google-site-verification" content="VxMyWmXqo4K3H0f2VlsAFsnZkKr3pvR48J_4wVtmeE4" />
+    <link rel="stylesheet" type="text/css" href="lies.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      $(function() {
+         	$( "#accordion" ).accordion({
+              		active: false,
+                	collapsible: true,
+                	heightStyle: "content",
       
+            	});
+      	});
+      
+      
+      var text='L I E S';
+      var delay=80; // speed of trail
+      var Xoff=20; // pixel count from the left of the cursor (- values go to left)
+      var Yoff=0; // pixel count from the top of the cursor (- values go up)
+      var txtw=10;  // amount of pixel space each character occupies
+      var beghtml='<font-family: "Helvetica">';  // optional html code that effects whole text string such as font color, size, etc. 
+      var endhtml='</font>';  
+      ns4 = (navigator.appName.indexOf("Netscape")>=0 && document.layers)? true : false;
+      ie4 = (document.all && !document.getElementById)? true : false;
+      ie5 = (document.all && document.getElementById)? true : false;
+      ns6 = (document.getElementById && navigator.appName.indexOf("Netscape")>=0 )? true: false;
+      var txtA=new Array();
+      text=text.split('');
+      var x1=0;
+      var y1=-1000;
+      var t='';
+      for(i=1;i<=text.length;i++){
+      t+=(ns4)? '<layer left="0" top="-100" width="'+txtw+'" name="txt'+i+'" height="1">' : '<div id="txt'+i+'" style="position:absolute; top:-100px; left:0px; height:1px; width:'+txtw+'; visibility:visible; font-family: "Maison neue", Maison Neue, Maison, Ariel; font-size: 14px; font-weight:300 ; height: 22px;">';
+      t+=beghtml+text[i-1]+endhtml;
+      t+=(ns4)? '</layer>' : '</div>';
+      }
+      document.write(t);
+      function moveid(id,x,y){
+      if(ns4)id.moveTo(x,y);
+      else{
+      id.style.left=x+'px';
+      id.style.top=y+'px';
+      }}
+      function animate(evt){
+      x1=Xoff+((ie4||ie5)?event.clientX+document.body.scrollLeft:evt.pageX);
+      y1=Yoff+((ie4||ie5)?event.clientY+document.body.scrollTop:evt.pageY);
+      }
+      function getidleft(id){
+      if(ns4)return id.left;
+      else return parseInt(id.style.left);
+      }
+      function getidtop(id){
+      if(ns4)return id.top;
+      else return parseInt(id.style.top);
+      }
+      function getwindowwidth(){
+      if(ie4||ie5)return document.body.clientWidth+document.body.scrollLeft;
+      else return window.innerWidth+pageXOffset;
+      }
+      function movetxts(){
+      for(i=text.length;i>1;i=i-1){
+      if(getidleft(txtA[i-1])+txtw*2>=getwindowwidth()){
+      moveid(txtA[i-1],0,-1000);
+      moveid(txtA[i],0,-1000);
+      }else moveid(txtA[i], getidleft(txtA[i-1])+txtw, getidtop(txtA[i-1]));
+      }
+      moveid(txtA[1],x1,y1);
+      }
+      window.onload=function(){
+      for(i=1;i<=text.length;i++)txtA[i]=(ns4)?document.layers['txt'+i]:(ie4)?document.all['txt'+i]:document.getElementById('txt'+i);
+      if(ns4)document.captureEvents(Event.MOUSEMOVE);
+      document.onmousemove=animate;
+      setInterval('movetxts()',delay);
+      }
+      
+    </script>
+  </head>
+  <body>
+    <div id="body">
       <div class="content">
-		    <p>LIES is a journal spearheaded by a queer feminist collective based in multiple cities: Oakland, Baltimore, Philadelphia, New York, London. LIES is a platform for certain conversations and critiques that are difficult, impossible or dangerous if cis men are in the room. We attack the legacy of racism and transphobia that has plagued feminist organizing, and strive to develop new autonomous feminist practices that take antagonism to white supremacy and transphobia as essential parts of feminist struggle. LIES came out of our experiences within these struggles. It seeks to embody and develop in print the practice of autonomy that we needed to save ourselves in the midst of movements squared on patriarchy and fueled by the subordination of everyone but white cis men. LIES is a communist journal against communists. We draw our purpose and support from feminist, queer, and trans circles, our friends and comrades to whom this journal is devoted.</p>
-		</div>
-			
-			<p><a href="https://www.facebook.com/LiesJournal/">Facebook</a> • <a href="http://liesjournal.tumblr.com/">Tumblr</a> • 
-				<script type="text/javascript">
-				    document.write("<a href=\"mail" + "to:" + new Array("liesjournal@","ail.com").join("gm") + "\">" + new Array("Email") + "</" + "a>");
-				</script>
-			</p>
-		</div>
-	</div>
+        <a name="below-top"></a>
+        <h1>LIES Journal</h1>
+        <h3>LIES is now accepting submissions for Volume III (2017)</h3>
+        <p>LIES is a platform for materialist, communist, autonomous, and otherwise antagonistic writing by non cis men. We seek to embody and develop in print autonomous feminist practices that understand opposition to capitalism, cisheteropatriarchy, white supremacy, xenophobia, and the legacies of colonialism and slavery as central to feminist struggle. We especially encourage submissions by writers of color; writers of trans, non-binary, two-spirit, and all other non-cisgender experience; and writers with indigenous, diasporic, migrant, and cross-cultural backgrounds. We hope to solicit writings that foreground decolonial perspectives and challenge Euro-American-centric historical and analytical frameworks.
+        <p>We publish a variety of written formats, including: essay-length analytical pieces, poetry, creative writing, workers’ inquiries, and explorations of archival materials, and more. We are also interested in publishing pieces that have not appeared in English yet; if you can help translate or if you know of a piece that needs translating, please get in touch!</p>
+        <p></p>
+        <p></p>
 
-</div>
+      <div class="customlist">
+      	<h2>Topics of interest include, but are not limited to:</h2>
+        <table class="stockists">
+          
+          <tr>
+            <td class="nonlinkcell stockist">
+              Materialist-feminist contemporary and historical analyses of the neo-fascist, white and/or ethno-nationalist, xenophobic right
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Major political upheavals such as Brexit in the U.K. and the Trump presidency in the U.S.
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Global perspectives on anti-blackness
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Healthcare, care work, and alternative care networks
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Disability and ableism 
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Transgender militancy, gender struggle and/or abolition, institutional and vigilante violence against trans people
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Inquiries into the nature of gender, race, and/or class
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Militancy and feminism
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Workers’ inquiries with an eye to race, gender, and migration
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              State violence, dispossession, displacement, and regimes of migration control
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Border-crossing and cross-cultural dwelling
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Indigenous resistance movements, decolonial thought and methodologies
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Resource extraction and climate change crises
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Value form theory, communization, and other political-economic critique
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Ontology and historical materialism
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Historical and contemporary conversations and material exchanges between the South and the East; South-to-South dialogues
+            </td>
+          </tr>
+          <tr>
+            <td class="nonlinkcell stockist">
+              Report backs from ongoing struggles and resistance movements
+            </td>
+          </tr>
+        </table>
+    </div>
 
-</body>
+
+
+
+
+
+        <p></p>
+        <p>Initial pitches, abstracts, or first drafts are due by <b>Tuesday 14th February 2017</b>. Send submissions and any questions to liesjournal [at] gmail [dot] com. Due to financial limitations of the project, we regret that at present all authors are unpaid; however contributors will be given close editorial support in developing their work.</p>
+      </div>
+      <div class="content">
+        <a name="below-top"></a>
+        <h1>Read</h1>
+        <p>You may download a full PDF of <a href="http://dl.dropboxusercontent.com/u/20075901/LIES%20Final%20Download%20Single%20Page.pdf">Volume I</a> or of <a href="volume2.pdf">Volume II</a>, or read individual articles below. </p>
+        <div id="accordion" class="customlist">
+          <h2>LIES Volume I</h2>
+          <div>
+            <table>
+              <tr>
+                <td class="article"><a href="volume1-01-editorialnote.html">Editorial Note - LIES Collective</a></td>
+                <td><a href="volume1-01-editorialnote.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="nonlinkcell-accordion">
+                  <h3>Not-Sex And Social Relations</h3>
+                </td>
+              </tr>
+              <tr>
+                <td class="article"><a href="volume1-02-undoingsex.html">Undoing Sex: Against Sexual Optimism - C.E.</a></td>
+                <td><a href="volume1-02-undoingsex.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="article"><a href="volume1-03-againstcoupleform.html">Against the Couple Form - Clémence X. Clementine</a></td>
+                <td><a href="volume1-03-againstcoupleform.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="article">	
+                  <a href="volume1-04-letterstol.html">Letters to L: Visions and Paranoia - M. Sandovsky</a>
+                </td>
+                <td><a href="volume1-04-letterstol.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-05-saltwedge.html">Salt Wedge (Excerpts) - Sogumi</a>
+                </td>
+                <td><a href="volume1-05-saltwedge.pdf"><span class="downloadlinks">PDF</span></a>
+                </td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-06-caring.html">Caring: A Labor of Stolen Time: Pages from a CNA’s Notebook - Jomo</a>
+                </td>
+                <td><a href="volume1-06-caring.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="nonlinkcell-accordion">
+                  <h3>Notes On Struggle</h3>
+                </td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-07-santarita.html">Santa Rita 128 To 131 - Wendy Trevino</a>
+                </td>
+                <td><a href="volume1-07-santarita.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-08-occupations.html">
+                    On the Recent Occupations: A Communique From W.&amp;.T.C.H. - W.&amp;.T.C.H.
+                </td>
+                <td><a href="volume1-08-occupations.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-09-womeninuprising.html">Women in Uprising: The Oaxaca Commune, the State, and Reproductive Labor - Barucha Calamity Peller</a>
+                </td>
+                <td><a href="volume1-09-womeninuprising.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-10-againstinnocence.html">Against Innocence: Race, Gender, and the Politics of Safety - Jackie Wang</a>
+                </td>
+                <td><a href="volume1-10-againstinnocence.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">
+                  Recent Communiques
+                </td>
+              </tr>
+              <tr>
+                <td class="nonlinkcell-accordion">
+                  <h3>Identity, Abolition, Communization</h3>
+                </td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-11-donttry.html">Don’t Try to Dig Yourself out of the Hole. You Won’t Get Out. - Magda Llwhisk</a>
+                </td>
+                <td><a href="volume1-11-donttry.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-12-genderdistinction.html">The Gender Distinction in Communization Theory - P. Valentine</a>
+                </td>
+                <td><span class="downloadlinks"><a href="volume1-12-genderdistinction-english.pdf">English</a>   <a href="volume1-12-genderdistinction-spanish.pdf">Spanish</a></span></td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-13-tobeliberated.html">“To Be Liberated from Them (or Through Them)”: A Call for a New Approach - Sky Palace</a>
+                </td>
+                <td><a href="volume1-13-tobeliberated.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="nonlinkcell-accordion">
+                  <h3>Archives</h3>
+                </td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-14-prostitution.html">“All The Work We Do As Women”: Feminist Manifestoson Prostitution and the State, 1977</a>
+                </td>
+                <td><a href="volume1-14-prostitution.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="article">
+                  <a href="volume1-15-comingout.html">“We Referred to It as Coming Out”: Recollections on Trans Identity, State Violence, and 1960s Radicalism - Suzan Cooke</a>
+                </td>
+                <td><a href="volume1-15-comingout.pdf"><span class="downloadlinks">PDF</span></a></td>
+              </tr>
+              <tr>
+                <td class="nonlinkcell-accordion">
+                  <h3>Reviews</h3>
+                </td>
+              </tr>
+              <tr>
+                <td class="article"><a href="volume1-16-bookreview.html">Normal Life: Administrative Violence, Critical Trans Politics, and the Limits of the Law, Dean Spade</a></td>
+                <td><a href="volume1-16-bookreview.pdf"><span class="downloadlinks">PDF</span></a>
+                </td>
+            </table>
+          </div>
+          <h2>LIES Volume II</h2>
+          <div>
+            <table>
+              <tr>
+                <td class="article nonlinkcell">Editorial - LIES Collective</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Untitled - Michelle</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Against Gender, Against Society - nila nokizaru</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">I am Here as a Victim - Michelle R.</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">A Disgrace Reserved for Prostitutes: Complicity &amp; the Beloved Community - Pluma Sumaq</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Grateful - Monica Stevens</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Inversion &amp; Invisibility: - Black Women, Black Masculinity, &amp; Anti-Blackness - LaKeyma King</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">How to Die - Feng Chen</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Shout to Cissy Girls - Sepand Mashiahof</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">To Make Many Lines, to Form Many Bonds: Thoughts on Autonomous Organizing - FLOC</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Fantasy Numeral 4 - Feng Chen</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">First Women, Then the Nation: Confronting Colonial Gender Violence - L. Cornum</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Monica, My Son - Monica Stevens</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Notes on the Erotic in the Capitalist Mode of Production - Jack Frost &amp; Eli Long</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">What Resembles the Grave But Isn’t - Anne Boyer</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Infrastructures of Injury - Amanda Armstrong</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Get Free - Julia Katz</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">The Fire This Time? - Jasmine Gibson</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">The Gospel According to Michelle - Michelle</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">love poems - Paula Cobo–Guevara</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Hanging Out - coda wei</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Betrayal - Words to Fire Collective</td>
+              </tr>
+              <tr>
+                <td class="article nonlinkcell">Poem #2 - Eden Jeffries</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Shop</h1>
+        <p>All proceeds from the journal go into making the next issue of the journal, as well as sometimes being sold as a benefit to people working on important struggles.</p>
+        <div class="customlist">
+          <h2>Stockists</h2>
+          <div>
+            <table class="stockists">
+              <tr>
+                <td class="nonlinkcell">
+                  <h3>Online</h3>
+                </td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://www.akpress.org/liesjournal.html">AK Press, USA</a></td>
+                <td><a href="http://www.akpress.org/liesjournal.html"><span class="volumes">Vol. I &amp; II</span></a></td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://www.akuk.com/index.php?_a=product&product_id=7524">AK Press, UK</a></td>
+                <td><a href="http://www.akuk.com/index.php?_a=product&product_id=7524"><span class="volumes">Vol. I &amp; II</span></a></td>
+              </tr>
+              <tr>
+                <td class="nonlinkcell">
+                  <h3>California</h3>
+                </td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://moesbooks.com/">Moe’s Books, Berkeley</a></td>
+                <td><a href="http://moesbooks.com/"><span class="volumes">Vol. II</span></a></td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://thelonghaul.org/">The Long Haul, Berkeley</a></td>
+                <td><a href="http://thelonghaul.org/"><span class="volumes">Vol. II</span></a></td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://qilombo.org/">Qilombo, Oakland</a></td>
+                <td><a href="http://qilombo.org/"><span class="volumes">Vol. II</span></a></td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://moderntimesbookstore.com/">Modern Times Bookstore, San Francisco</a></td>
+                <td><a href="http://moderntimesbookstore.com/"><span class="volumes">Vol. II</span></a></td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://www.alleycatbookshop.com/">Alley Cat Books, San Francisco</a></td>
+                <td><a href="http://www.alleycatbookshop.com/"><span class="volumes">Vol. II</span></a></td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://thelonghaul.org">The Long Haul, Berkeley</a></td>
+                <td><a href="http://thelonghaul.org"><span class="volumes">Vol. II</span></a></td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://www.greenapplebooks.com">Green Apple Books, San Francisco</a></td>
+                <td><a href="http://www.greenapplebooks.com"><span class="volumes">Vol. II</span></a></td>
+              </tr>
+              <tr>
+                <td class="nonlinkcell">
+                  <h3>New York</h3>
+                </td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://bluestockings.com/">Bluestockings Books, New York</a></td>
+                <td><a href="http://bluestockings.com/"><span class="volumes">Vol. II</span></a></td>
+              </tr>
+              <tr>
+                <td class="nonlinkcell">
+                  <h3>Indiana</h3>
+                </td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="http://www.boxcarbooks.org/">Boxcar Books, Bloomington</a></td>
+                <td><a href="http://www.boxcarbooks.org/"><span class="volumes">Vol. I & II</span></a></td>
+              </tr>
+              <tr>
+                <td class="nonlinkcell">
+                  <h3>Canada</h3>
+                </td>
+              </tr>
+              <tr>
+                <td class="stockist"><a href="https://insoumise.wordpress.com">Librairie L'Insoumise, Montréal</a></td>
+                <td><a href="https://insoumise.wordpress.com"><span class="volumes">Vol. II</span></a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+        <div class="content">
+          <h1>Contact</h1>
+          <p>Email us to order limited edition, double-sided LIES posters for sale for $10 each. More merch (t-shirts, totes, patches, and more) will be available soon.</p>
+          <p>
+            For wholesale orders (20+), please
+            <script type="text/javascript">
+              document.write("<a href=\"mail" + "to:" + new Array("liesjournal@","ail.com").join("gm") + "\">" + new Array("contact us") + "</" + "a>");
+            </script>
+            .
+          </p>
+          <div class="content">
+            <p>LIES is a journal spearheaded by a queer feminist collective based in multiple cities: Oakland, Baltimore, Philadelphia, New York, London. LIES is a platform for certain conversations and critiques that are difficult, impossible or dangerous if cis men are in the room. We attack the legacy of racism and transphobia that has plagued feminist organizing, and strive to develop new autonomous feminist practices that take antagonism to white supremacy and transphobia as essential parts of feminist struggle. LIES came out of our experiences within these struggles. It seeks to embody and develop in print the practice of autonomy that we needed to save ourselves in the midst of movements squared on patriarchy and fueled by the subordination of everyone but white cis men. LIES is a communist journal against communists. We draw our purpose and support from feminist, queer, and trans circles, our friends and comrades to whom this journal is devoted.</p>
+          </div>
+          <p>
+            <a href="https://www.facebook.com/LiesJournal/">Facebook</a> • <a href="http://liesjournal.tumblr.com/">Tumblr</a> • 
+            <script type="text/javascript">
+              document.write("<a href=\"mail" + "to:" + new Array("liesjournal@","ail.com").join("gm") + "\">" + new Array("Email") + "</" + "a>");
+            </script>
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
