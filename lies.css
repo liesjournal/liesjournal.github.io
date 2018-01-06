@@ -226,15 +226,15 @@ tr h3, .stockist {
   padding-left: 18px;
 }
 
-.downloadlinks, .downloadlinks a {
+.downloadlinks, .downloadlinks a, .volumes, .volumes a {
   font-size: 12px;
   color: #D6A56A;
 }
 
-.volumes, .volumes a {
-  font-size: 12px;
+h2 > .downloadlinks {
+  float: right;
+  border: none;
 }
-
 
 /* Homepage hero
  * --------------------------------------- */
@@ -280,6 +280,9 @@ tr h3, .stockist {
     }
   }
 
+.header-img {
+  margin: 40px auto 20px;
+}
 
 /* Essay styling
  * --------------------------------------- */
